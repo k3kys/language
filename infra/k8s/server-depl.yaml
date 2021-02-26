@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: server
+  template:
+    metadata:
+      labels:
+        component: server
+    spec:
+      containers:
+        - name: server
+          image: m60kys/language-server
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGO_URI
+              value: mongodb://mongo-srv:27017/test
+            - name: JWT_EXIPIRES_IN
+              value: 14d
+            - name: JWT_COOKIE_EXPIRES_IN
+              value: "14"
+            - name: NODEMAILER_EMAIL
+              value: noreply@gmail.com
+            - name: NODEMAILER_USER
+              value: k3kys.dev
+            - name: NODEMAILER_PASSWORD
+              value: kys941201!
+            - name: JWT_KEY
+              value: asdf

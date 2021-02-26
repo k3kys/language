@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: client
+  template:
+    metadata:
+      labels:
+        component: client
+    spec:
+      containers:
+        - name: client
+          image: m60kys/language-client
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_JWT_KEY
+              value: asdf
