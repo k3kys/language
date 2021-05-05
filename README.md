@@ -1,4 +1,7 @@
 # 웹 메일 인증 시스템 구축하기
+![image](https://user-images.githubusercontent.com/56282663/117102522-7a726280-adb3-11eb-8f47-1fa30deee871.png)
+![image](https://user-images.githubusercontent.com/56282663/117102584-95dd6d80-adb3-11eb-8dbe-30fb26a2248d.png)
+
 
 2021년 6월 학교별 언어교환 서비스 구축 프로젝트를 시작하기 앞서
 
